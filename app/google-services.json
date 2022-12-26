@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "44856402601",
+    "project_id": "mostafa-khalifa",
+    "storage_bucket": "mostafa-khalifa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44856402601:android:d07b149993b40b57c7ffb8",
+        "android_client_info": {
+          "package_name": "com.example.mostafakhalifa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44856402601-dcrsmcje4aja5976reg4u59q14sf35c3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsgS5gaqLQuCnzjbbpOEI2jES6EFUuQkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44856402601-dcrsmcje4aja5976reg4u59q14sf35c3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44856402601:android:8fbb51f525138937c7ffb8",
+        "android_client_info": {
+          "package_name": "com.example.mostafakhalifacroshet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44856402601-dcrsmcje4aja5976reg4u59q14sf35c3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsgS5gaqLQuCnzjbbpOEI2jES6EFUuQkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44856402601-dcrsmcje4aja5976reg4u59q14sf35c3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
