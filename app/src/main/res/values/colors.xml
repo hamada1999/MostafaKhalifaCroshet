@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#808080</color>
+    <color name="first">#F32424</color>
+    <color name="second">#9772FB</color>
+    <color name="third">#F73D93</color>
+    <color name="forth">#3EC70B</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
