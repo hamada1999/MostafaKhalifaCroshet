@@ -24,6 +24,16 @@ class RemoteDatabase {
     val successAuth : LiveData<Boolean>
         get() = _successAuth
 
+    private var INSTANCE : RemoteDatabase? = null
+
+    fun getInstance() : RemoteDatabase {
+        if(INSTANCE == null){
+            INSTANCE = RemoteDatabase()
+            return INSTANCE as RemoteDatabase
+        }
+        return INSTANCE as RemoteDatabase
+    }
+
 
     fun getDatabaseRef(ref : String) : DatabaseReference {
         myRef = database.child(ref)

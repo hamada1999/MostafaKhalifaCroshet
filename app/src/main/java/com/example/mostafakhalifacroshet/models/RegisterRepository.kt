@@ -1,7 +1,10 @@
 package com.example.mostafakhalifacroshet.models
 
 import androidx.lifecycle.MutableLiveData
-import com.example.mostafakhalifacroshet.viewModels.Admin
+import com.example.mostafakhalifacroshet.data.Artist
+import com.example.mostafakhalifacroshet.data.Customer
+import com.example.mostafakhalifacroshet.data.Admin
+import com.example.mostafakhalifacroshet.data.Moderator
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -12,7 +15,7 @@ class RegisterRepository {
     val moderatorUsers = MutableLiveData<Moderator>()
     val adminUsers = MutableLiveData<Admin>()
 
-    private val remoteDatabase = RemoteDatabase()
+    private val remoteDatabase = RemoteDatabase().getInstance()
 
     fun getCustomerUsers(){
         remoteDatabase.getDatabaseRef("Users/Customers")

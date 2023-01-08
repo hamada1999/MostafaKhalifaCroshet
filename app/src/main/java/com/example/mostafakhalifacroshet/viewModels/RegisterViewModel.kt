@@ -1,13 +1,11 @@
 package com.example.mostafakhalifacroshet.viewModels
 
-import android.content.Context
 import androidx.databinding.Bindable
 import androidx.databinding.Observable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.mostafakhalifacroshet.models.Customer
-import com.example.mostafakhalifacroshet.models.Gender
+import com.example.mostafakhalifacroshet.data.*
 import com.example.mostafakhalifacroshet.models.RegisterRepository
 import com.example.mostafakhalifacroshet.models.RemoteDatabase
 import com.example.mostafakhalifacroshet.utils.UserType
@@ -16,7 +14,7 @@ import com.example.mostafakhalifacroshet.utils.userType
 class RegisterViewModel() : ViewModel()  , Observable  {
 
     var registerRepository = RegisterRepository()
-    private var remoteDatabase = RemoteDatabase()
+    private var remoteDatabase = RemoteDatabase().getInstance()
 
     @Bindable
     var inputName = MutableLiveData<String>()
@@ -97,9 +95,23 @@ class RegisterViewModel() : ViewModel()  , Observable  {
 
     fun registerUser() {
         remoteDatabase.userAuth(inputMail.value ?: " ",  inputPass.value?: " ")
-        var customer = Customer( remoteDatabase.getUserUid(),inputName.value ?: " " , inputMail.value?: " " , inputPass.value?: " " , userType
-        , inputPhone.value ?: " ", inputAddress.value?: " ", inputGender.value?: " ", inputAge.value ?: " ")
-        remoteDatabase.registerNewUser(customer)
+
+        // check user Type
+        if(userType == UserType.CUSTOMER){
+            val user = Customer( remoteDatabase.getUserUid(),inputName.value ?: " " , inputMail.value?: " " , inputPass.value?: " " , userType
+                , inputPhone.value ?: " ", inputAddress.value?: " ", inputGender.value?: " ", inputAge.value ?: " ")
+            remoteDatabase.registerNewUser(user)
+        }else if(userType == UserType.ARTIST){
+            val user = Artist( remoteDatabase.getUserUid(),inputName.value ?: " " , inputMail.value?: " " , inputPass.value?: " " , userType
+                , inputPhone.value ?: " ", inputAddress.value?: " ", inputGender.value?: " ", inputAge.value ?: " ")
+            remoteDatabase.registerNewUser(user)
+        }else if(userType == UserType.MODERATOR){
+            val user = Moderator( remoteDatabase.getUserUid(),inputName.value ?: " " , inputMail.value?: " " , inputPass.value?: " " , userType)
+            remoteDatabase.registerNewUser(user)
+        }else if(userType == UserType.ADMIN){
+            val user = Admin( remoteDatabase.getUserUid(),inputName.value ?: " " , inputMail.value?: " " , inputPass.value?: " " , userType)
+            remoteDatabase.registerNewUser(user)
+        }
     }
 
     private fun isEmailValid(email : String) : Boolean {

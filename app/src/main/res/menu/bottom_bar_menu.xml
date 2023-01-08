@@ -10,7 +10,7 @@
     <item
             android:id="@+id/history"
             android:icon="@drawable/notification"
-            android:title="History"
+            android:title="Notifications"
             android:color="@color/second"/>
 
     <item

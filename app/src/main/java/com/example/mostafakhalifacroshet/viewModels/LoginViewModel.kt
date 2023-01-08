@@ -9,7 +9,7 @@ import com.example.mostafakhalifacroshet.models.RemoteDatabase
 
 class LoginViewModel : ViewModel() , Observable{
 
-    private var remoteDatabase = RemoteDatabase()
+    private var remoteDatabase = RemoteDatabase().getInstance()
 
     @Bindable
     var inputMail = MutableLiveData<String>()

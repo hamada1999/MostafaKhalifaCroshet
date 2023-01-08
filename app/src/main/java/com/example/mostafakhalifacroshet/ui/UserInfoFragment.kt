@@ -1,25 +1,19 @@
 package com.example.mostafakhalifacroshet.ui
 
-import android.app.Application
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import androidx.appcompat.widget.AppCompatAutoCompleteTextView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
 import com.example.mostafakhalifacroshet.R
 import com.example.mostafakhalifacroshet.viewModels.RegisterViewModel
 import com.example.mostafakhalifacroshet.databinding.FragmentUserInfoBinding
-import com.example.mostafakhalifacroshet.models.Customer
-import com.example.mostafakhalifacroshet.utils.UserType
-import com.example.mostafakhalifacroshet.utils.userType
+import com.example.mostafakhalifacroshet.data.Customer
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

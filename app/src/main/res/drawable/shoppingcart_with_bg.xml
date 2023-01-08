@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:width="45dp" android:height="45dp">
+        <shape android:shape="oval" android:tint="#8089C4E1"/>
+    </item>
+    <item android:gravity="center" android:drawable="@drawable/ic_shopping_cart"
+            android:width="30dp" android:height="30dp"/>
+
+</layer-list>
