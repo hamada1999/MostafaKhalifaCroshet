@@ -16,9 +16,8 @@ import com.example.mostafakhalifacroshet.data.Product
 class ProductsRecyclerAdapter(private val pList : List<Product>, private val context : Context) :
     RecyclerView.Adapter<ProductsRecyclerAdapter.ViewHolder>() {
 
-    // create listener to listen to button clicks
-    lateinit var loveListener : Listener
-    lateinit var cartListener : Listener
+    private lateinit var cartListener : Listener
+
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val productImg : ImageView = itemView.findViewById(R.id.product_img)
@@ -34,14 +33,8 @@ class ProductsRecyclerAdapter(private val pList : List<Product>, private val con
         fun onClick(position : Int)
     }
 
-    @JvmName("setLoveListener1")
-    fun setLoveListener(listener : Listener){
-        this.loveListener = listener
-    }
-
-    @JvmName("setCartListener1")
-    fun setCartListener(listener : Listener){
-        this.loveListener = listener
+    fun setListener(listener : Listener){
+        cartListener = listener
     }
 
 
@@ -69,8 +62,7 @@ class ProductsRecyclerAdapter(private val pList : List<Product>, private val con
          */
 
         holder.cartButton.setOnClickListener(View.OnClickListener {
-            if(cartListener != null)
-                cartListener.onClick(position)
+            cartListener.onClick(position)
         })
     }
 

@@ -43,4 +43,18 @@
             android:name="com.example.mostafakhalifacroshet.MainActivity"
             android:label="activity_main"
             tools:layout="@layout/activity_main" />
+    <activity
+            android:id="@+id/productDetailsActivity"
+            android:name="com.example.mostafakhalifacroshet.ui.ProductDetailsActivity"
+            android:label="activity_product_details"
+            tools:layout="@layout/activity_product_details" />
+    <fragment
+            android:id="@+id/allProductsFragment"
+            android:name="com.example.mostafakhalifacroshet.ui.AllProductsFragment"
+            android:label="fragment_all_products"
+            tools:layout="@layout/fragment_all_products" >
+        <action
+                android:id="@+id/action_allProductsFragment_to_productDetailsActivity"
+                app:destination="@id/productDetailsActivity" />
+    </fragment>
 </navigation>

@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.MutableLiveData
 import com.example.mostafakhalifacroshet.models.RemoteDatabase
+import com.example.mostafakhalifacroshet.utils.PRODUCT_REFERENCE
 import com.example.mostafakhalifacroshet.utils.TAG
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -28,7 +29,7 @@ class ProductRepository(val app : Application) {
 
     @WorkerThread
     fun getRemoteProductsData() {
-        remoteDatabase.getDatabaseRef("Products").child("COTTON")
+        remoteDatabase.getDatabaseRef(PRODUCT_REFERENCE).child("COTTON")
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val list = ArrayList<Product>()

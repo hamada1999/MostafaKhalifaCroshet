@@ -110,7 +110,7 @@
     <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_height="wrap_content"
             android:background="#80C3F1FD"
             android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@+id/tabLayout"
